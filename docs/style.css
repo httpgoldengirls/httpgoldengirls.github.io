@@ -76,7 +76,7 @@ to this section's matching END comment to see page-specific styles.
 END Glitch hello-app default styles
 ******************************************************************************/
 html {
-  background-image:url(https://cdn.glitch.global/ec08d62f-2bba-47ca-bdf7-d3932589d44e/ggbg.jpg?v=1723745662262);
+  background-image:url(ggbg.jpg);
   background-repeat:repeat;
 }
 
