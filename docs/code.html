@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="https://glitch.com/favicon.ico" />
+  <link rel="icon" href="favicon.ico" />
   <meta name="description" content="An app for learning about status codes!" />
   <meta name="og:description" content="An app for learning about status codes!" />
   <meta property="og:title" content="HTTP Keanu (Random)" />
-  <meta property="og:image" content="thankeanu.jpg" />
+  <meta property="og:image" content="" />
 
   <title>HTTP Keanu (Random)</title>
 
@@ -522,7 +522,7 @@
             `;
     document.querySelector(".codes").innerHTML = content;
 //    document.querySelector(".selected").setAttribute("id", "code"+code.code);
-    document.querySelector('meta[property="og:image"]').setAttribute("content", code.pic);
+    document.querySelector('meta[property="og:image"]').setAttribute("content", "https://www.keanu.codes/"+code.pic);
 
   </script>
 </body>
