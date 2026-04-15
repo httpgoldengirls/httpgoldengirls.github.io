@@ -12,28 +12,26 @@
       name="og:description"
       content="An app for learning about status codes!"
     />
-    <meta property="og:title" content="HTTP Keanu ({{{status}}} {{{name}}})" />
+    <meta property="og:title" content="HTTP Golden Girls ({{{status}}} {{{name}}})" />
     <meta property="og:image" content="{{{img}}}" />
 
-    <title>HTTP Keanu ({{{status}}} {{{name}}})</title>
+    <title>HTTP Golden Girls ({{{status}}} {{{name}}})</title>
 
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
 
   </head>
   <body>
     <div class="wrapper">
       <div class="content" role="main">
-        <h1><a href="/">HTTP Keanu</a></h1>
+        <h1><a href="/">HTTP Golden Girls</a></h1>
         <p class="intro">
           A fun way to learn about status codes, inspired by
           <a href="https://http.cat">http.cat</a>!
         </p>
         <p class="random">
           🎲
-          <a href="/">Choose a random code</a>
+          <a href="random.html">Choose a random code</a>
         </p>
-        <p><em>This is a copy of the original homepage for posterity...</em></p>
-
         <div class="codes">
           {{#if selected}}
             <div class="highlight selected" id="code{{{code}}}">
@@ -58,13 +56,13 @@
               </div>
             </div>
           {{else}}
-            {{#each settings.list}}
+            {{#each list}}
               <div class="code" id="code{{{code}}}">
 
                 <h2>{{code}}</h2>
                 <h3>{{name}}</h3>
                 <div class="imghold">
-                  <a href="/"><img
+                  <a href="/code.html?code={{code}}"><img
                       src="{{pic}}"
                       alt="{{alt}}" 
                     /></a>
@@ -75,20 +73,17 @@
         </div>
         <p id="bonus">
           Bonus: try selecting an invalid code, like
-          <a href="/">1000</a>
+          <a href="/code.html?code=1000">1000</a>
         </p>
       </div>
       <footer class="footer">
         <a
           class="btn--remix"
           target="_top"
-          href="https://glitch.com/edit/#!/remix/httpkeanu"
+          href="https://github.com/httpgoldengirls/httpgoldengirls.github.io"
         >
-          <img
-            src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-            alt=""
-          />
-          Remix on Glitch
+          🚧
+          Remix your own
         </a>
       </footer>
     </div>
