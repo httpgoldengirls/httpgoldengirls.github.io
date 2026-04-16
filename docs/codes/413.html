@@ -12,10 +12,10 @@
       name="og:description"
       content="An app for learning about status codes!"
     />
-    <meta property="og:title" content="HTTP Golden Girls ({{{status}}} {{{name}}})" />
-    <meta property="og:image" content="https://www.goldengirls.codes/{{{img}}}" />
+    <meta property="og:title" content="HTTP Golden Girls (413 Payload Too Large)" />
+    <meta property="og:image" content="https://www.goldengirls.codes/Screenshot_20240806_213038_Firefox.jpg" />
 
-    <title>HTTP Golden Girls ({{{status}}} {{{name}}})</title>
+    <title>HTTP Golden Girls (413 Payload Too Large)</title>
 
     <link rel="stylesheet" href="/style.css" />
 
@@ -33,43 +33,21 @@
           <a href="/random.html">Choose a random code</a>
         </p>
         <div class="codes">
-          {{#if selected}}
-            <div class="highlight selected" id="code{{{code}}}">
+            <div class="highlight selected" id="code413">
 
-              <h2>{{code}}</h2>
-              <h3>{{name}}</h3>
+              <h2>413</h2>
+              <h3>Payload Too Large</h3>
               <div class="imghold">
-                <img src="{{pic}}" alt="{{alt}}" />
+                <img src="Screenshot_20240806_213038_Firefox.jpg" alt="Sophia saying I&#x27;m surprised you were able to walk in October" />
               </div>
 
               <div class="extra">
-                <p>{{info}}</p>
-                {{#if joker}}
+                <p>From the Men of Blanche&#x27;s Boudoir calendar in my favourite episode Twas the Nightmare Before Christmas</p>
                   <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/"
-                  >HTTP status codes on MDN</a>
-                {{else}}
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/{{{code}}}"
-                  >{{code}} on MDN</a>
-                {{/if}}
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/413"
+                  >413 on MDN</a>
               </div>
             </div>
-          {{else}}
-            {{#each settings.list}}
-              <div class="code" id="code{{{code}}}">
-
-                <h2>{{code}}</h2>
-                <h3>{{name}}</h3>
-                <div class="imghold">
-                  <img
-                      src="{{pic}}"
-                      alt="{{alt}}" 
-                    />
-                </div>
-              </div>
-            {{/each}}
-          {{/if}}
         </div>
         <p id="bonus">
           Bonus: try selecting an invalid code, like

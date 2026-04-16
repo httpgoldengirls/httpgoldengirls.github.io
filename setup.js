@@ -5,8 +5,8 @@ const codePage = hbs.compile(codeTemplate);
 const codes = require("./codes.json");
 const indexPage = require("./index.hbs");
 const indexOutput = indexPage(codes);
-fs.writeFileSync("home.html", indexOutput);
-/*
+fs.writeFileSync("./docs/index.html", indexOutput);
+
 codes.list.forEach((c) => {
 
     let page = `${c.code}.html`;
@@ -16,7 +16,7 @@ codes.list.forEach((c) => {
 
     const codeOutput = codePage(c);
 
-    fs.writeFileSync(`./codes/${page}`, codeOutput);
+    fs.writeFileSync(`./docs/codes/${page}`, codeOutput);
 
 });
-*/
+

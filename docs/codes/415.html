@@ -12,10 +12,10 @@
       name="og:description"
       content="An app for learning about status codes!"
     />
-    <meta property="og:title" content="HTTP Golden Girls ({{{status}}} {{{name}}})" />
-    <meta property="og:image" content="https://www.goldengirls.codes/{{{img}}}" />
+    <meta property="og:title" content="HTTP Golden Girls (415 Unsupported Media Type)" />
+    <meta property="og:image" content="https://www.goldengirls.codes/Screenshot_20240812_002701_Firefox.jpg" />
 
-    <title>HTTP Golden Girls ({{{status}}} {{{name}}})</title>
+    <title>HTTP Golden Girls (415 Unsupported Media Type)</title>
 
     <link rel="stylesheet" href="/style.css" />
 
@@ -33,43 +33,21 @@
           <a href="/random.html">Choose a random code</a>
         </p>
         <div class="codes">
-          {{#if selected}}
-            <div class="highlight selected" id="code{{{code}}}">
+            <div class="highlight selected" id="code415">
 
-              <h2>{{code}}</h2>
-              <h3>{{name}}</h3>
+              <h2>415</h2>
+              <h3>Unsupported Media Type</h3>
               <div class="imghold">
-                <img src="{{pic}}" alt="{{alt}}" />
+                <img src="Screenshot_20240812_002701_Firefox.jpg" alt="Sophia singing along to Purple Rain on a walkman" />
               </div>
 
               <div class="extra">
-                <p>{{info}}</p>
-                {{#if joker}}
+                <p></p>
                   <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/"
-                  >HTTP status codes on MDN</a>
-                {{else}}
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/{{{code}}}"
-                  >{{code}} on MDN</a>
-                {{/if}}
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/415"
+                  >415 on MDN</a>
               </div>
             </div>
-          {{else}}
-            {{#each settings.list}}
-              <div class="code" id="code{{{code}}}">
-
-                <h2>{{code}}</h2>
-                <h3>{{name}}</h3>
-                <div class="imghold">
-                  <img
-                      src="{{pic}}"
-                      alt="{{alt}}" 
-                    />
-                </div>
-              </div>
-            {{/each}}
-          {{/if}}
         </div>
         <p id="bonus">
           Bonus: try selecting an invalid code, like

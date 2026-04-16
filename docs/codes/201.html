@@ -12,10 +12,10 @@
       name="og:description"
       content="An app for learning about status codes!"
     />
-    <meta property="og:title" content="HTTP Golden Girls ({{{status}}} {{{name}}})" />
-    <meta property="og:image" content="https://www.goldengirls.codes/{{{img}}}" />
+    <meta property="og:title" content="HTTP Golden Girls (201 Created)" />
+    <meta property="og:image" content="https://www.goldengirls.codes/sophia_cooking-138356711-1-8873fafd3c4e49ae80d3482e3637ba02~2.jpg" />
 
-    <title>HTTP Golden Girls ({{{status}}} {{{name}}})</title>
+    <title>HTTP Golden Girls (201 Created)</title>
 
     <link rel="stylesheet" href="/style.css" />
 
@@ -33,43 +33,21 @@
           <a href="/random.html">Choose a random code</a>
         </p>
         <div class="codes">
-          {{#if selected}}
-            <div class="highlight selected" id="code{{{code}}}">
+            <div class="highlight selected" id="code201">
 
-              <h2>{{code}}</h2>
-              <h3>{{name}}</h3>
+              <h2>201</h2>
+              <h3>Created</h3>
               <div class="imghold">
-                <img src="{{pic}}" alt="{{alt}}" />
+                <img src="sophia_cooking-138356711-1-8873fafd3c4e49ae80d3482e3637ba02~2.jpg" alt="Sophia cooking" />
               </div>
 
               <div class="extra">
-                <p>{{info}}</p>
-                {{#if joker}}
+                <p></p>
                   <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/"
-                  >HTTP status codes on MDN</a>
-                {{else}}
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/{{{code}}}"
-                  >{{code}} on MDN</a>
-                {{/if}}
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201"
+                  >201 on MDN</a>
               </div>
             </div>
-          {{else}}
-            {{#each settings.list}}
-              <div class="code" id="code{{{code}}}">
-
-                <h2>{{code}}</h2>
-                <h3>{{name}}</h3>
-                <div class="imghold">
-                  <img
-                      src="{{pic}}"
-                      alt="{{alt}}" 
-                    />
-                </div>
-              </div>
-            {{/each}}
-          {{/if}}
         </div>
         <p id="bonus">
           Bonus: try selecting an invalid code, like

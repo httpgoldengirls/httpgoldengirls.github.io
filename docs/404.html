@@ -7,10 +7,10 @@
   <link rel="icon" href="favicon.ico" />
   <meta name="description" content="An app for learning about status codes!" />
   <meta name="og:description" content="An app for learning about status codes!" />
-  <meta property="og:title" content="HTTP Golden Girls ( )" />
-  <meta property="og:image" content="" />
+  <meta property="og:title" content="HTTP Golden Girls (nope)" />
+  <meta property="og:image" content="https://www.goldengirls.codes/Screenshot_20240814_000625_Firefox.jpg" />
 
-  <title>HTTP Golden Girls ( )</title>
+  <title>HTTP Golden Girls (nope)</title>
 
   <link rel="stylesheet" href="style.css" />
 
@@ -34,7 +34,7 @@
 
       <p id="bonus">
         Bonus: try selecting an invalid code, like
-        <a href="/code.html?code=1000">1000</a>
+        <a href="/1000.html">1000</a>
       </p>
     </div>
     <footer class="footer">
@@ -533,7 +533,7 @@
       alt: "The girls wearing golf gear"
     }
   ];
-    var urlParams = window.location.search;
+/*    var urlParams = window.location.search;
     var getQuery = urlParams.split('?')[1];
     var params = getQuery.split('&');
     let found = -1;
@@ -543,8 +543,9 @@
         found = parts[1];
     });
     let codeFound = codes.filter((cds)=>{ return ""+cds.code===found; });
+    */
     let bns = bonus[Math.floor(Math.random() * bonus.length)];
-    let code = codeFound.length>0 ? codeFound[0] : {
+    let code = {
       joker: true,
       code: 0,
       name: "WELP",
@@ -573,9 +574,9 @@
             </div>
             `;
     document.querySelector(".codes").innerHTML = content;
-    document.querySelector('meta[property="og\\:image"]').setAttribute("content", "https://www.goldengirls.codes/"+code.pic);
-    document.querySelector('meta[property="og\\:title"]').setAttribute("content", `HTTP Golden Girls (${code.code})`);
-    document.querySelector('title').textContent=`HTTP Golden Girls (${code.code})`;
+//    document.querySelector('meta[property="og\\:image"]').setAttribute("content", "https://www.goldengirls.codes/"+code.pic);
+//    document.querySelector('meta[property="og\\:title"]').setAttribute("content", `HTTP Golden Girls (${code.code})`);
+//    document.querySelector('title').textContent=`HTTP Golden Girls (${code.code})`;
 
   </script>
 </body>
